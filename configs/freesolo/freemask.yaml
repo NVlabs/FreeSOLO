@@ -1,0 +1,37 @@
+MODEL:
+  META_ARCHITECTURE: "PseudoSOLOv2"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  WEIGHTS: "training_dir/pre-trained/DenseCL/densecl_r101_imagenet_200ep.pkl"
+  MASK_ON: True
+  BACKBONE:
+    NAME: "build_resnet_backbone"
+    FREEZE_AT: 0
+  RESNETS:
+    STRIDE_IN_1X1: False
+    DEPTH: 101
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+  FPN:
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+  SOLOV2:
+    IS_FREEMASK: True
+    NUM_CLASSES: 2
+    LOSS:
+      FOCAL_WEIGHT: 1.0
+      DICE_WEIGHT: 1.0
+SOLVER:
+  LR_SCHEDULER_NAME: "WarmupMultiStepLR"
+  MAX_ITER: 30000
+  STEPS: []
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  WARMUP_FACTOR: 0.01
+  WARMUP_ITERS: 1000
+  CHECKPOINT_PERIOD: 5000
+DATASETS:
+  TRAIN: ("coco_2017_train_unlabeled_densecl_r101",)
+  TEST: ("coco_2017_val",)
+INPUT:
+  MIN_SIZE_TRAIN: (640, 672, 704, 736, 768, 800)
+  MASK_FORMAT: "bitmask"
+  FORMAT: "RGB"
