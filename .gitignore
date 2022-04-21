@@ -4,10 +4,10 @@
 /datasets
 
 
-*.png
+#*.png
 *.json
 *.diff
-*.jpg
+#*.jpg
 
 # compilation and distribution
 __pycache__
