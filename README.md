@@ -88,7 +88,7 @@ bash test.sh {MODEL_PATH}
 Please consider citing our paper in your publications if the project helps your research. BibTeX reference is as follow.
 ```BibTeX
 @article{wang2022freesolo,
-  title={FreeSOLO: Learning to Segment Objects without Annotations},
+  title={{FreeSOLO}: Learning to Segment Objects without Annotations},
   author={Wang, Xinlong and Yu, Zhiding and De Mello, Shalini and Kautz, Jan and Anandkumar, Anima and Shen, Chunhua and Alvarez, Jose M},
   journal={arXiv preprint arXiv:2202.12181},
   year={2022}
