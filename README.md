@@ -81,7 +81,8 @@ Download the trained model from [here](https://cloudstor.aarnet.edu.au/plus/s/V8
 ```shell
 bash test.sh {MODEL_PATH}
 ```
-
+Disclaimer: This is a reimplementation and the numbers are slightly different from the original paper.
+The above script will get instance segmentation results of 4.3 AP and 9.4 AP50. 
 
 
 ## Citations
