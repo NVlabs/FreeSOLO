@@ -45,7 +45,7 @@ Follow the [datasets/README.md](https://github.com/facebookresearch/detectron2/b
 
 ### Pre-trained model
 
-Download the [DenseCL](https://github.com/WXinlong/DenseCL) pre-trained model from [here](https://cloudstor.aarnet.edu.au/plus/s/hdAg5RYm8NNM2QP/download). Convert it to detectron2's format and put the converted model under "training_dir/pre-trained/DenseCL" directory.
+Download the [DenseCL](https://github.com/WXinlong/DenseCL) pre-trained model from [here](https://cloudstor.aarnet.edu.au/plus/s/4sugyvuBOiMXXnC/download). Convert it to detectron2's format and put the converted model under "training_dir/pre-trained/DenseCL" directory.
 
 ```shell
 python tools/convert-pretrain-to-detectron2.py {WEIGHT_FILE}.pth {WEIGHT_FILE}.pkl
